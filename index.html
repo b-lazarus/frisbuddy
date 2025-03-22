@@ -9,44 +9,46 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 50px;
-            background-color: #f4f4f9;
+            background: linear-gradient(to bottom, #f4f4f9, #e0e0eb);
             color: #333;
         }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 8px;
+        }
         .logo {
-            width: 200px; /* Adjusted size */
+            width: 200px;
+            max-width: 100%;
             height: auto;
             margin-bottom: 20px;
         }
         h1 {
             font-size: 2.5em;
             color: #2D3E50;
-            margin-bottom: 10px;
         }
         p {
             font-size: 1.2em;
-            color: #777;
-            margin-bottom: 20px;
+            color: #555;
         }
-        .instagram-link {
+        .instagram-link, .cta-button {
             display: inline-block;
-            margin-top: 20px;
-            font-size: 18px;
-            text-decoration: none;
-            color: #E1306C;
-            font-weight: bold;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 30px;
+            margin: 15px;
             padding: 10px 20px;
             font-size: 18px;
             text-decoration: none;
             color: white;
             background-color: #007bff;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-        .cta-button:hover {
+        .instagram-link {
+            background-color: #E1306C;
+        }
+        .cta-button:hover, .instagram-link:hover {
             background-color: #0056b3;
         }
         .testimonial {
@@ -56,49 +58,94 @@
             margin-top: 40px;
         }
         .testimonial img {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin: 0 20px;
+            object-fit: cover;
         }
         .testimonial p {
             font-size: 1.2em;
             font-style: italic;
             color: #555;
-            flex: 1;
+            max-width: 600px;
         }
         .link-container {
             margin-top: 30px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border: none;
+            margin: 40px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+        form input, form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <img src="logo.png" alt="FrisBuddy Logo" class="logo">
     <h1>Welcome to FrisBuddy!</h1>
     <p>Coming soon...</p>
 
-    <a href="https://www.instagram.com/frisbuddy" target="_blank" class="instagram-link">
+    <a href="https://www.instagram.com/frisbuddy" target="_blank" rel="noopener noreferrer" class="instagram-link">
         Follow us on Instagram
     </a>
 
-    <br>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="cta-button">
-        Invest here
-    </a>
-
-    <!-- Link to the provided URL -->
     <div class="link-container">
-        <a href="https://uwaterloo.ca/capstone-design/2025-mechanical-engineering-capstone-designs#1" target="_blank" class="cta-button">
+        <a href="https://uwaterloo.ca/capstone-design/2025-mechanical-engineering-capstone-designs#1" target="_blank" rel="noopener noreferrer" class="cta-button">
             Check out the Capstone Designs
         </a>
     </div>
 
+    <!-- YouTube Video -->
+    <iframe 
+        src="https://www.youtube.com/embed/Ok86_Hlvtng" 
+        allowfullscreen
+        title="FrisBuddy Promo">
+    </iframe>
+
     <div class="testimonial">
-        <img src="customer.png" alt="Customer Testimonial">
-        <p>"FrisBuddy is amazing! I can't wait for it to launch!"</p>
-        <img src="customer.png" alt="Customer Testimonial">
+        <img src="testimonial.jpg" alt="Happy user">
+        <p>"FrisBuddy changed the way I play! It's like having a coach on the field with me!"</p>
     </div>
+
+    <!-- Contact Form -->
+    <form action="mailto:benjamin.lazarus11@gmail.com" method="POST" enctype="text/plain">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
 
 </body>
 </html>
