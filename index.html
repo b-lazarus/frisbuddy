@@ -19,7 +19,7 @@
             padding: 20px;
         }
 
-        /* Sticky Header with Logo Height */
+        /* Sticky Header with Slim Design */
         header {
             position: sticky;
             top: 0;
@@ -31,7 +31,7 @@
         }
 
         .logo {
-            height: 70px; /* Adjust logo size */
+            height: 70px; /* Logo height only */
             width: auto;
             display: block;
             margin: 0 auto;
@@ -47,6 +47,7 @@
             color: #555;
             margin-bottom: 40px;
         }
+
         .instagram-link, .cta-button {
             display: inline-block;
             margin: 15px;
@@ -58,12 +59,15 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         .instagram-link {
             background-color: #E1306C;
         }
+
         .instagram-link:hover, .cta-button:hover {
             background-color: #0056b3;
         }
+
         iframe {
             width: 100%;
             max-width: 900px;
@@ -71,6 +75,7 @@
             border: none;
             margin: 40px 0;
         }
+
         img {
             max-width: 100%;
             height: auto;
@@ -79,102 +84,28 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        .form-title {
-            font-size: 2em;
+
+        .contact-info {
+            font-size: 20px;
             color: #2D3E50;
-            margin-top: 60px;
-        }
-    </style>
-
-    <!-- Formcarry Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-
-        .formcarry-container {
-            box-sizing: border-box;
-            margin: 40px auto 0 auto;
-            padding: 0;
-            font-family: "Inter", sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.01em;
-
-            width: 400px;
-
-            /* NORMAL */
-            --fc-border-color: #ECEFF9;
-            --fc-normal-text-color: #0E0B3D;
-            --fc-normal-placeholder-color: #B3B8D0;
-
-            /* PRIMARY COLOR */
-            --fc-primary-color-hue: 220;
-            --fc-error-color-hue: 356;
-            --fc-primary-hsl: var(--fc-primary-color-hue), 100%, 54%;
-            --fc-error-hsl: var(--fc-error-color-hue), 100%, 54%;
-
-            /* HOVER */
-            --fc-field-hover-bg-color: #F7F9FC;
-            --fc-border-hover-color: #DDE0EE;
-            --fc-field-hover-text-color: #B3B8D0;
-
-            --fc-border-active-color: #1463FF;
+            margin: 60px 0;
+            line-height: 1.6;
         }
 
-        .formcarry-container * {
-            box-sizing: border-box;
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .formcarry-container label {
-            display: block;
-            cursor: pointer;
-        }
-
-        .formcarry-container .formcarry-block:not(:first-child) {
-            margin-top: 16px;
-        }
-
-        .formcarry-container input,
-        .formcarry-container textarea {
-            margin-top: 4px;
-            width: 100%;
-            height: 42px;
-            border: 1px solid var(--fc-border-color);
-            color: var(--fc-normal-text-color);
-            border-radius: 6px;
-            padding: 8px 12px;
-            font-family: "Inter", sans-serif;
-            font-size: 14px;
-            transition: 125ms background, 125ms color, 125ms box-shadow;
-        }
-
-        .formcarry-container textarea {
-            min-height: 188px;
-            max-width: 100%;
-            padding-top: 12px;
-        }
-
-        .formcarry-container button {
-            font-family: "Inter", sans-serif;
-            font-weight: 500;
-            font-size: 14px;
-            height: 42px;
-            width: 100%;
-            border-radius: 6px;
-            background-color: hsla(var(--fc-primary-hsl));
-            color: #fff;
-            cursor: pointer;
-            transition: 125ms all;
-        }
-
-        .formcarry-container button:hover {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), hsla(var(--fc-primary-hsl));
+        .contact-info a:hover {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<!-- Sticky Header with Slimmer Design -->
+<!-- Sticky Header -->
 <header>
     <img src="logo.png" alt="FrisBuddy Logo" class="logo">
 </header>
@@ -199,33 +130,11 @@
     <!-- Capstone Poster -->
     <img src="Capstone Poster.jpg" alt="FrisBuddy Capstone Poster">
 
-    <!-- Contact Us Form -->
-    <h2 class="form-title">Contact Us</h2>
-
-    <section class="formcarry-container">
-        <form action="https://formcarry.com/s/your-formcarry-endpoint" method="POST" enctype="multipart/form-data">
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-name">Full Name</label>
-                <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" required />
-            </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-email">Your Email Address</label>
-                <input type="email" name="email" id="fc-generated-1-email" placeholder="john@doe.com" required />
-            </div>
-
-            <div class="formcarry-block">
-                <label for="fc-generated-1-message">Your Message</label>
-                <textarea name="message" id="fc-generated-1-message" placeholder="Enter your message..." required></textarea>
-            </div>
-
-            <div class="formcarry-block">  
-                <button type="submit">Send</button>
-            </div>
-
-        </form>
-    </section>
+    <!-- Contact Information -->
+    <div class="contact-info">
+        Contact us at <a href="https://www.instagram.com/frisbuddy" target="_blank">Frisbuddy on Instagram</a>,  
+        or at <a href="mailto:blazarus@uwaterloo.ca">blazarus@uwaterloo.ca</a>
+    </div>
 
 </div>
 
