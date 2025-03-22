@@ -18,16 +18,25 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Sticky Header with Logo Height */
         header {
+            position: sticky;
+            top: 0;
             background: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px 0;
-        }
-        .logo {
-            width: 300px;
-            max-width: 100%;
+            z-index: 1000;
+            padding: 0;
             height: auto;
         }
+
+        .logo {
+            height: 70px; /* Adjust logo size */
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
         h1 {
             font-size: 3em;
             color: #2D3E50;
@@ -70,70 +79,30 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 40px;
-        }
-        form input, form textarea {
-            width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        form button {
-            padding: 10px 25px;
-            font-size: 18px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        form button:hover {
-            background-color: #0056b3;
+        .form-title {
+            font-size: 2em;
+            color: #2D3E50;
+            margin-top: 60px;
         }
     </style>
-</head>
-<body>
 
-<!-- Header with Larger Logo -->
-<header>
-    <img src="logo.png" alt="FrisBuddy Logo" class="logo">
-</header>
+    <!-- Formcarry Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
-<div class="container">
+        .formcarry-container {
+            box-sizing: border-box;
+            margin: 40px auto 0 auto;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.01em;
 
-    <h1>The Ultimate Frisbee Training Partner</h1>
-    <h2>Simulates real throws and increases your solo practice efficiency</h2>
+            width: 400px;
 
-    <a href="https://www.instagram.com/frisbuddy" target="_blank" rel="noopener noreferrer" class="instagram-link">
-        Follow us on Instagram
-    </a>
-
-    <!-- YouTube Video -->
-    <iframe 
-        src="https://www.youtube.com/embed/Ok86_Hlvtng" 
-        allowfullscreen
-        title="FrisBuddy Promo">
-    </iframe>
-
-    <!-- Capstone Poster -->
-    <img src="Capstone Poster.jpg" alt="FrisBuddy Capstone Poster">
-
-    <!-- Contact Form -->
-    <form action="mailto:benjamin.lazarus11@gmail.com" method="POST" enctype="text/plain">
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-
-</div>
-
-</body>
-</html>
+            /* NORMAL */
+            --fc-border-color: #ECEFF9;
+            --fc-normal-text-color: #0E0B3D;
+            --fc-normal-placeholder-color:
